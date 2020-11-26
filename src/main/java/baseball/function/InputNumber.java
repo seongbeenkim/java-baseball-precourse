@@ -18,7 +18,7 @@ public class InputNumber {
     }
 
     public String inputRestartNumber() {
-        System.out.print(DO_YOU_WANT_TO_PLAY_AGAIN);
+        System.out.println(DO_YOU_WANT_TO_PLAY_AGAIN);
         return scanner.nextLine();
     }
 }
