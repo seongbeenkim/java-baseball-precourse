@@ -8,6 +8,7 @@ public class Validator {
     private static final String ONE = "1";
     private static final String TWO = "2";
     private static final String PLEASE_INPUT_THREE_DIGIT_NUMBER = "3자리 숫자를 입력해주세요.";
+    private static final String PLEASE_INPUT_ONE_DIGIT_NUMBER = "1자리 숫자를 입력해주세요.";
     private static final String PLEASE_INPUT_NON_ZERO_NUMBER = "0이 포함되지 않는 3자리 숫자를 입력해주세요.";
     private static final String PLEASE_INPUT_1_OR_2 = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
     private static final String PLEASE_INPUT_ALL_DIFFERENT_NUMBER = "서로 다른 수의 3자리 숫자를 입력해주세요.";
@@ -16,11 +17,22 @@ public class Validator {
 
     private Validator() {}
 
-    public static boolean isNaturalNumber(String userNumber) {
+    public static boolean isNaturalNumberForuserNumber(String userNumber) {
         try {
             Integer.parseInt(userNumber);
         } catch (IllegalArgumentException e) {
             System.out.println(PLEASE_INPUT_THREE_DIGIT_NUMBER);
+            return false;
+        }
+        return true;
+    }
+
+
+    public static boolean isNaturalNumberForRestartNumber(String userNumber) {
+        try {
+            Integer.parseInt(userNumber);
+        } catch (IllegalArgumentException e) {
+            System.out.println(PLEASE_INPUT_ONE_DIGIT_NUMBER);
             return false;
         }
         return true;
