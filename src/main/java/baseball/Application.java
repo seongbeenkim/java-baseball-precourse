@@ -40,7 +40,7 @@ public class Application {
 
         try {
 
-            if (Validator.isNaturalNumber(userNumber)
+            if (Validator.isNaturalNumberForuserNumber(userNumber)
                     && Validator.isThreeDigit(userNumber)
                     && Validator.isNonZero(userNumber)
                     && Validator.isAllDifferntNumber(userNumber)) {
@@ -59,7 +59,7 @@ public class Application {
 
         try {
 
-            if (Validator.isNaturalNumber(userNumber)
+            if (Validator.isNaturalNumberForRestartNumber(userNumber)
                     && Validator.isOneOrTwo(userNumber)) {
                 return Integer.parseInt(userNumber);
             }
